@@ -44,14 +44,14 @@ class Directory extends Component {
     }
 
     render() {
-
         const  { sections } = this.state; 
+        const { history } = this.props
 
         return(
             <div className='directory-menu'>
                 {
-                    sections.map(({id, title, imageUrl, size}) => {
-                        return <MenuItem key={id}title={title.toLocaleUpperCase()} imageUrl={imageUrl} size={size}/>
+                    sections.map(({id, ...otherSectionProps}) => {
+                        return <MenuItem key={id} {...otherSectionProps}/>
                     })
                 }
             </div>

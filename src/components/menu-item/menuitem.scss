@@ -1,6 +1,6 @@
 .menu-item {
     min-width: 30%;
-    height: 240px;
+    height: 300px;
     display: flex;
     flex: 1 1 auto; // skrót dla flex-grow, flex-shrink and flex-basis. Dwa ostatnie są opcjonalne. pierwsze 1(flex grow) oznacza że przestrzeń która pozostanie między elementami zostanie równo między nie rozdystrybuowana. Kolejne 1 (flexshrink) jest wartgością domyślną dl akurczenia sie elementów jeżeli potrzeba. Auto jest wartością flex-basis i definiuje domyślny rozmiar elementu przed rozdaniem wolnej przestrzeni tym elementom. Auto oznacza "spójrz na moją wysokośc i szerokość"
     align-items: center;
