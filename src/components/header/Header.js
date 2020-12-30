@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.scss'
 import {Link} from 'react-router-dom';
-import {ReactComponent as Logo} from '../../assets/crown.svg'
+import {ReactComponent as Logo} from '../../assets/crown.svg' // specjalny syntax reacta który mówi że chcemy importować komponent reacta który renderuje SVG.
 
 const Header = () => {
     return(
