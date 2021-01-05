@@ -9,3 +9,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
+* {
+    box-sizing: border-box; // oznacza że pading, border i margin nie wpływają na wielkośc elementu samego w sobie.
+}
