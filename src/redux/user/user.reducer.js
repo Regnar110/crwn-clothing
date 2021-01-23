@@ -1,4 +1,4 @@
-import { Switch } from "react-router-dom"
+import { UserActionTypes } from  './user.types'
 
 const INITIAL_STATE = { // obiekt reprezentujący początkowy stan tego reducera
     currentUser: null
@@ -6,7 +6,7 @@ const INITIAL_STATE = { // obiekt reprezentujący początkowy stan tego reducera
 
 const userReducer = (state = INITIAL_STATE, action) => { // state to stan w momencie wywołania akcji przekazany przez STORE. state=INITIAL_STATE to nowość w es6, która pozwala na ustawienie state na initial_state w przypadku gdyby state był undefined
     switch (action.type) {
-        case 'SET_CURRENT_USER':
+        case UserActionTypes.SET_CURRENT_USER:
             return { // zwravccamy nowy obiekt reprezentujący nowy stan 
                 ...state, // rozporzestrzeinamy cały stan
                 currentUser: action.payload // zmieniamyw wartośc właściwości, która nas interesuje w rozprzestrzenionym stanie.
