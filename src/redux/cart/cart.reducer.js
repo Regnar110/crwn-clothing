@@ -18,6 +18,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 ...state, 
                 cartItems: addItemToCart(state.cartItems, action.payload) // chcemy aby do carItems dodawane były nowe przedmioty więc do istniejącego koszyka dodajemu nowe rzeczy stąd rozporzestrzenienie starego stanu
             }
+        case cartActionTypes.CLEAR_ITEM_FROM_CART:
+            return {
+                ...state,
+                cartItems: state.cartItems.filter(
+                    cartItem => cartItem.id !== action.payload.id
+                )
+            }
 
             default:
                 return state;
