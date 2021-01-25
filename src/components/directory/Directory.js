@@ -45,7 +45,7 @@ class Directory extends Component {
 
     render() {
         const  { sections } = this.state; 
-        const { history } = this.props
+        // const { history } = this.props
 
         return(
             <div className='directory-menu'>
