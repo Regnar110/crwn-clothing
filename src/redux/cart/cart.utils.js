@@ -13,3 +13,20 @@ export const addItemToCart = (cartItems, cartItemToAdd) => { // utils function. 
 
     return [...cartItems, {...cartItemToAdd, quantity: 1}] // jeżeli existingCartItem nie istnie e to zwracamy tablicę z wszystkimi itemami CartItems i nowym CartItemToAdd do którego dodajemy od razu quantity. W ten sposób każdy dodany przedmiot(dodany po raz pierwsyz) będzie miał quantitny
 }
+
+export const removeItemFromCart = ( cartItems, cartItemToRemove) => {
+    const existingCartItem = cartItems.find(
+        cartItem => cartItem.id === cartItemToRemove.id
+    )
+
+    if(existingCartItem.quantity === 1) {
+        return cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id)
+    }
+
+    return cartItems.map(
+        cartItem => cartItem.id === cartItemToRemove.id ? 
+            {...cartItem, quantity: cartItem.quantity - 1}
+            :
+            cartItem
+    )
+}
